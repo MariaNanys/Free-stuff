@@ -2,12 +2,6 @@ import React from 'react';
 import { BrowserRouter as Router, Routes, Route, Navigate } from "react-router-dom";
 import Home  from '../src/components/Home';
 import  Navigation  from './components/Navigation';
-import  HomeHeader  from './components/HomeHeader';
-import  HomeThreeColumns  from './components/HomeThreeColumns';
-import  HomeFourSteps  from './components/HomeFourSteps';
-import HomeAboutUs from './components/HomeAboutUs';
-import HomeWhoWeHelp from './components/HomeWhoWeHelp';
-import HomeContact from './components/HomeContact';
 import LogIn from './components/LogIn';
 import Registration from './components/Registration';
 

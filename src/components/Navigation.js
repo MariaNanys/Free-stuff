@@ -24,11 +24,11 @@ export function Navigation() {
                 <NavLink to='/registration' className="registration">Registration</NavLink>
             </div>
             <div className="Navigation-home-page">
-                <button onClick={() => scrollTo('home')}>Start</button>
-                <button onClick={() => scrollTo('home_four_steps')}>Add stuffs</button>
-                <button onClick={() => scrollTo('home_about_us')}>About Us</button>
-                <button onClick={() => scrollTo('home_who_we_help')}>Fundations and Organizations</button>
-                <button onClick={() => scrollTo('home_contact')}>Contact Us</button>
+                <a onClick={() => scrollTo('home')}>Start</a>
+                <a onClick={() => scrollTo('home_four_steps')}>Add stuffs</a>
+                <a onClick={() => scrollTo('home_about_us')}>About Us</a>
+                <a onClick={() => scrollTo('home_who_we_help')}>Foundations & Organizations</a>
+                <a onClick={() => scrollTo('home_contact')}>Contact Us</a>
             </div>
         </div>
     )
