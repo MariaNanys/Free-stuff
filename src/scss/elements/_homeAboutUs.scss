@@ -1,4 +1,38 @@
 .home_about_us {
-    height: 500px;
-    background-color: darkseagreen;
+    height: 100vh;
+    background-color: $color-cream;
+
+    .home_about_us-content {
+        display: flex;
+        justify-content: space-around;
+        margin: 0 auto;
+        height: 100%;
+        align-items: center;
+    }
+
+    .home_about_us-content-text {
+        margin-top: -15rem;
+        gap: 2rem;
+    }
+
+    h2 {
+        font-size: 2rem;
+        font-weight: 300;
+        text-align: center;
+        padding: 4rem 0;
+    }
+
+    p {
+        width: 30vw;
+        line-height: 1.6;
+    }
+
+    img {
+        width: auto;
+        height: 55vh;
+        border: 3rem solid $color-white;
+        border-bottom: 6rem solid $color-white;
+        background-color: $color-white;
+        transform: rotate(20deg);
+    }
 }

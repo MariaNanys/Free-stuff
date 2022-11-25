@@ -1,7 +1,8 @@
 .home_header {
-    height: calc(100vh - 7.5rem);
-    max-width: 1350px;
+    height: calc(100vh - 6.5rem);
+    max-width: 1500px;
     margin: 0 auto;
+    background-color: #fff;
     
     .home_header-title-btn {
         display: flex;
@@ -16,33 +17,35 @@
             font-family: $font-base;
             font-weight: 400;
             color: $color-dark-grey;
-            margin-top: 1.5rem;
+            margin-top: 1.2rem;
         }
 
         h1 {
             font-size: 2rem;
         }
 
-        h2{
+        h2 {
             font-weight: 300;
-            width: 50rem;
+            width: 37rem;
             text-align: center;
             line-height: 1.6;
         }
 
         .home_header-image {
-        background-image: url("https://iv.pl/images/132d45befc76ee9c4e7ed0f6cbb8f25b.png");
-        background-position: center;
-        background-size: cover;
-        background-repeat: no-repeat;
-        height: calc(97vh - 7.5rem);
-        width: 77vw;
+        height: 80vh;
+        max-width: 80vw;
         position: absolute;
-        z-index: -1;
+        z-index: 1;
+        top: 3rem;
+
+        @media (min-width: 1500px) and (min-device-height: 749px) {
+            height: 85vh;
+            top: 1.5rem;
+        }
         }
 
         Button {
-            margin: 2rem;
+            margin: 1rem;
         }
     }
 }
@@ -50,4 +53,9 @@
 .home_header-btn-start {
     width: 20rem;
     height: 3rem;
+    z-index: 2;
+}
+
+.ui.olive.button, .ui.olive.buttons  { 
+    background-color: $color-base;
 }

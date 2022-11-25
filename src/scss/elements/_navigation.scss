@@ -1,17 +1,18 @@
 .Navigation {
     font-size: 1rem;
     font-family: $font-base;
-    padding: 1rem;
-    height: 7.5rem;
+    padding-top: 1rem;
     display: flex;
     flex-direction: column;
     align-items: flex-end;
+    max-width: 1500px;
+    text-align: end;
+    margin: 0 auto;
 
     .Navigation-login, .Navigation-home-page {
         display: flex;
         flex-direction: row;
         gap: 1rem;
-        margin-right: 6rem;
     }
 
     .login, .registration {
@@ -43,15 +44,27 @@
             align-items: center;
             text-align: center;
             justify-content: center;
-            transition: transform 0.8s;
+            transition: all 0.8s;
+            position: relative;
 
-            &:hover {
-                background-color: $color-base;
-                color: white;
-                transform: translate(0, 20px);
+               &::before {
+                content: "";
+                height: 3rem;
+                width: 8rem;
+                position: absolute;
+                bottom: -3rem;
+                top: 0;
+                left: 0;
+                
+                transition: all 0.8s;
+                z-index: -1;
+                transform: translateY((100%));
             }
-            
-            
+
+            &:hover::before {
+                transform: translateY(0);
+                background-color: $color-base;
+            }       
         }
     }
 }

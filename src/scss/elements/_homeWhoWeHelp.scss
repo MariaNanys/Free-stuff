@@ -1,3 +1,18 @@
 .home_who_we_help {
-    height: 500px;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    margin: 0 auto;
+
+    h2 {
+        height: 10%;
+        font-size: 3rem;
+        font-family: $font-alt;
+        text-transform: uppercase;
+    }
+    .home_who_we_help-content {
+        height: 80vh;
+    }
 }

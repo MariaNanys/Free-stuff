@@ -1,0 +1,40 @@
+.localgiving_none {
+    display: none;
+}
+
+.localgiving_content {
+    display: flex;
+    height: 23rem;
+    width: 60rem;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.localgiving-list {
+    width: 100%;
+    margin: 0 auto;
+}
+
+.localgiving_section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin-top: 3rem; 
+}
+
+.localgiving_title_mission {
+    text-align: start;
+    width: 50%;
+
+    h3 {
+        font-size: 1.5rem;
+    }
+}
+
+.localgiving_items {
+    text-align: end;
+    width: 50%;
+    font-size: 0.9rem;
+}

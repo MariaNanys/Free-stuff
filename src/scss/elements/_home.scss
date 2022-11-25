@@ -1,0 +1,24 @@
+.arrow-icon {
+    position: fixed;
+    bottom: 5rem;
+    right: 5rem;
+    cursor: pointer;
+    transform: all;
+    animation: jumping 0.5s infinite; 
+    animation-direction: alternate;  
+    color: $color-base; 
+    z-index: 10;
+    }
+
+@keyframes jumping {
+    0% {
+        transform: translateY(0);
+    }
+    100% {
+        transform: translateY(-1rem);
+    }
+}
+
+.hide{
+    display: none;
+}

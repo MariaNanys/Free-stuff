@@ -1,0 +1,19 @@
+.fundationsAndOrganizations_content {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    width: 1350px;
+    margin: 0 auto;
+}
+.focus_btn {
+    background-color: $color-base !important;
+    color: $color-white !important;
+}
+
+.fundationsAndOrganizations-description {
+    width: 50rem;
+    text-align: center;
+    margin: 4rem auto;
+    line-height: 2rem;
+    color: $color-dark-grey;
+}

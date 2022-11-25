@@ -1,0 +1,41 @@
+.organizations_none {
+    display: none;
+}
+
+.organizations_content {
+    display: flex;
+    height: 23rem;
+    width: 60rem;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.organizations-list {
+    width: 100%;
+    margin: 0 auto;
+
+}
+
+.organizations_section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin-top: 3rem; 
+}
+
+.organizations_title_mission {
+    text-align: start;
+    width: 50%;
+
+    h3 {
+        font-size: 1.5rem;
+    }
+}
+
+.organizations_items {
+    text-align: end;
+    width: 50%;
+    font-size: 0.9rem;
+}
