@@ -12,7 +12,7 @@ export function HomeFourSteps() {
                 <ul className="home_steps-list">
                     <li className="home_steps-list-item">
                         <span className="item_title first_step">Select item</span>
-                        <p>clothes,toys, equipment and others</p>
+                        <p>clothes, toys, equipment and others</p>
                     </li>
                     <li className="home_steps-list-item">
                         <span className="item_title second_step">Pack item</span>

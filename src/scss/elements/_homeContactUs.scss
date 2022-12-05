@@ -1,3 +1,63 @@
 .home_contact {
-    height: 500px;
+    height: 90vh;
+    
+    h2 { 
+        font-size: 3rem;
+        font-family: $font-alt;
+        text-transform: uppercase;
+        padding: 4rem 0;
+        text-align: center;
+    }
+}
+
+.home_contact-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 6rem;
+}
+
+.home_contact_infograph {
+    width: 43vw;
+    height: 52.4vh;
+    background-color: $color-pink;
+    border-radius: 40px 0 40px 0;
+}
+
+.home_contact_form {
+    width: 30vw;
+}
+
+.form_input {
+    label {
+            padding-left: 0.8rem !important;
+            font-size: 1.1rem !important;
+        }
+    input {
+        border-top: none !important;
+        border-left: none !important;
+        border-right: none !important;
+        border-radius: 0px !important;
+    }
+    
+}
+
+.form_input_message {
+margin-top: 1rem !important;
+
+    textarea {
+        height: 7rem !important;
+        resize: none !important;
+        border-top: none !important;
+        border-left: none !important;
+        border-right: none !important;
+        border-radius: 0px !important;   
+    }
+}
+.home_contact_form_btn {
+    background-color: $color-base !important;
+
+    &:hover {
+        background-color: $color-dark-blue !important;
+    }
 }

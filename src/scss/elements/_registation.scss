@@ -1,0 +1,51 @@
+.Registration {
+    margin: 5rem auto;
+    display: flex;
+    justify-content: center;
+
+    .registration_form {
+        width: 30rem !important;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+
+        label {
+            margin-bottom: 1rem !important;
+            font-size: 1.1rem !important;
+        }
+
+        Button {
+            color: $color-white !important;
+            background-color: $color-base !important;
+            width: 80%;
+            align-self: center !important;
+    
+            &:hover {
+                background-color: $color-dark-blue !important;
+            }
+        }
+    }
+
+    .registation_success {
+        width: 25rem;
+        height: 8rem;
+        background-color: lightblue;
+        text-align: center;
+        border-radius: 2rem;
+        padding: 0.5rem;
+        
+        h2 {
+            font-size: 2rem;
+        }
+}
+    .hide {
+        display: none;
+    }
+
+    .show {
+        display: block;
+        width: 30rem;
+    }
+}
+

@@ -1,0 +1,33 @@
+.LogIn {
+    width: 30rem;
+    margin: 5rem auto;
+}
+
+.inputs {
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    text-align: center;
+}
+
+.login_form {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+
+    label {
+        margin-bottom: 1rem !important;
+        font-size: 1.1rem !important;
+    }
+
+    Button {
+        color: $color-white !important;
+        background-color: $color-base !important;
+        width: 80%;
+        align-self: center;
+
+    &:hover {
+        background-color: $color-dark-blue !important;
+    }
+    }
+}

@@ -47,6 +47,10 @@
             transition: all 0.8s;
             position: relative;
 
+            &:hover {
+                color: $color-white;
+            }
+
                &::before {
                 content: "";
                 height: 3rem;
@@ -64,6 +68,7 @@
             &:hover::before {
                 transform: translateY(0);
                 background-color: $color-base;
+                color: $color-white !important;
             }       
         }
     }

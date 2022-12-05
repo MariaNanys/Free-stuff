@@ -2,7 +2,7 @@
     height: calc(100vh - 6.5rem);
     max-width: 1500px;
     margin: 0 auto;
-    background-color: #fff;
+    background-color: $color-white;
     
     .home_header-title-btn {
         display: flex;
@@ -39,7 +39,7 @@
         top: 3rem;
 
         @media (min-width: 1500px) and (min-device-height: 749px) {
-            height: 85vh;
+            height: 82.5vh;
             top: 1.5rem;
         }
         }
@@ -51,11 +51,13 @@
 }
 
 .home_header-btn-start {
+    margin-top: 1rem !important;
     width: 20rem;
     height: 3rem;
     z-index: 2;
-}
+    background-color: $color-base !important;
 
-.ui.olive.button, .ui.olive.buttons  { 
-    background-color: $color-base;
+    &:hover {
+        background-color: $color-dark-blue !important;
+    }
 }

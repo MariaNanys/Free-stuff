@@ -1,6 +1,7 @@
 .home_about_us {
     height: 100vh;
-    background-color: $color-cream;
+    background-color: $color-redish;
+    color: $color-white;
 
     .home_about_us-content {
         display: flex;
@@ -16,10 +17,12 @@
     }
 
     h2 {
-        font-size: 2rem;
+        font-size: 3rem;
         font-weight: 300;
         text-align: center;
         padding: 4rem 0;
+        font-family: $font-alt;
+        text-transform: uppercase;
     }
 
     p {

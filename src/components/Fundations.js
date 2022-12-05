@@ -29,6 +29,7 @@ export function Fundations(active) {
                 {displayFund}
             </ul>
             <Pagination
+            className="pagination"
                 defaultActivePage={1}
                 pointing
                 secondary

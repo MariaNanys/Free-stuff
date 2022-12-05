@@ -28,24 +28,32 @@
         height: 5rem;
         align-self: center;
         margin-top: 6rem;
+        background-color: $color-base !important;
+
+        &:hover {
+            background-color: $color-dark-blue !important;
+        }
     }
 }
 
 .home_steps-list {
     display: flex;
     justify-content: center;
-    gap: 10rem;
-    padding: 11rem 0;
-    background-color: #F2E8CF;
-    color: $color-dark-grey;
+    gap: 6rem;
+    padding: 6rem 0;
+    color: $color-white;
     width: 100vw;
     height: 100%;
     font-size: 0.888rem;
 
     .home_steps-list-item {
-        width: 11rem;
+        width: 13rem;
+        height: 16rem;
         display: flex;
         flex-direction: column;
+        padding-top: 7rem;
+        border-radius: 40px 0px 40px 0px;
+        background-color: $color-pink;
     }
 
     .item_title {
@@ -53,28 +61,29 @@
         padding: 1rem 0;
         position: relative;
         height: 4rem;
+        
 
         &::before {
             content: '';
             height: 83px;
             width: 83px;
-            color: $color-dark-grey;
+            color: $color-white;
             background-position: center;
             background-repeat: no-repeat;
             background-size: contain;
             position: absolute;
             bottom: 4rem;
-            left: 3rem;
+            left: 4rem;
         }
 
         &::after {
             content: '';
             position: absolute;
             height: 0.5px;
-            border: 0.5px solid $color-dark-grey;
+            border: 0.5px solid $color-white;
             width: 5rem;
             bottom: 0;
-            left: 3rem;
+            left: 4rem;
         }
     }
 
@@ -94,5 +103,7 @@
 
     p {
         margin-top: 1rem;
+        width: 8rem;
+        align-self: center;
     }
 }

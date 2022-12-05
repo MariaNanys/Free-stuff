@@ -29,6 +29,8 @@ export function Localgiving(active) {
             <ul className="localgiving-list">
                 {displayLocal}
             </ul>
+            {localgivingList.length > 3
+            ?
             <Pagination
                 defaultActivePage={1}
                 pointing
@@ -36,6 +38,9 @@ export function Localgiving(active) {
                 totalPages={Math.ceil(localgivingList.length/localgivingPerPage)}
                 onPageChange={(e, page) => changePage(page)}
             />
+            :
+            <div></div>}
+            
         </div>
     )
 }

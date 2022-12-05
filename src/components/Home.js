@@ -5,7 +5,7 @@ import { HomeFooter } from "./HomeFooter";
 import HomeFourSteps from "./HomeFourSteps";
 import HomeHeader from "./HomeHeader";
 import HomeWhoWeHelp from "./HomeWhoWeHelp";
-import arrow from "../assets/up-chevron.png";
+import arrow from "../assets/up-arrow.png";
 import * as Scroll from 'react-scroll';
 
     
@@ -45,7 +45,7 @@ const moveUp = () => {
 
 
     return (
-       <>
+       <div className="content">
             <HomeHeader />
             <HomeFourSteps />
             <HomeAboutUs />
@@ -57,7 +57,7 @@ const moveUp = () => {
             onClick={moveUp}
             className={show ? "arrow-icon" : "hide"} />
             
-        </>
+        </div>
     )
 }
 
