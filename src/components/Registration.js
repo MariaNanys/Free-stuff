@@ -1,5 +1,6 @@
 import React, { useState , useEffect } from "react";
 import { Form, Button } from 'semantic-ui-react';
+import { NavLink } from 'react-router-dom';
 
 export function Registration() {
     const [user, setUser ]= useState({
@@ -144,6 +145,7 @@ export function Registration() {
                 error={user.confirmPasswordError ? 'Incorrect conforming password' : null}
                 />
                 <Button
+                className="registration_btn"
                 type='submit'
                 disabled={shouldDisable()}
                 >Register</Button>
@@ -152,8 +154,9 @@ export function Registration() {
                 <div className="registation_success">
                     <h2 >
                     Congratulations!
-                </h2>
-                <p>You create new acount!</p>
+                    </h2>
+                    <p>You create new acount!</p>
+                    <NavLink to="/login" className="login">Go back to Log In</NavLink>
                 </div>
                 
             </div>

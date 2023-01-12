@@ -1,6 +1,6 @@
 .home_four_steps {
     height: 100vh;
-    background-color: #fff;
+    background-color: $color-white;
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -31,7 +31,7 @@
         background-color: $color-base !important;
 
         &:hover {
-            background-color: $color-dark-blue !important;
+            background-color: $color-dark-yellow !important;
         }
     }
 }
@@ -41,7 +41,7 @@
     justify-content: center;
     gap: 6rem;
     padding: 6rem 0;
-    color: $color-white;
+    color: black;
     width: 100vw;
     height: 100%;
     font-size: 0.888rem;
@@ -53,7 +53,7 @@
         flex-direction: column;
         padding-top: 7rem;
         border-radius: 40px 0px 40px 0px;
-        background-color: $color-pink;
+        background-color: $color-light-yellow;
     }
 
     .item_title {
@@ -67,7 +67,7 @@
             content: '';
             height: 83px;
             width: 83px;
-            color: $color-white;
+            color: black;
             background-position: center;
             background-repeat: no-repeat;
             background-size: contain;
@@ -80,7 +80,7 @@
             content: '';
             position: absolute;
             height: 0.5px;
-            border: 0.5px solid $color-white;
+            border: 0.5px solid black;
             width: 5rem;
             bottom: 0;
             left: 4rem;

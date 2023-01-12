@@ -46,7 +46,7 @@
 
         @media (min-width: 1500px) and (min-device-height: 749px) {
             height: 82.5vh;
-            top: 1.5rem;
+            margin-top: -10rem;
         }   
 }
 
@@ -58,6 +58,6 @@
     background-color: $color-base !important;
 
     &:hover {
-        background-color: $color-dark-blue !important;
+        background-color: $color-dark-yellow !important;
     }
 }

@@ -12,6 +12,7 @@
     animation-direction: alternate;  
     color: $color-base; 
     z-index: 10;
+    transform: rotate(90deg);
     }
 
 @keyframes jumping {

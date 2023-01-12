@@ -5,7 +5,7 @@ import { HomeFooter } from "./HomeFooter";
 import HomeFourSteps from "./HomeFourSteps";
 import HomeHeader from "./HomeHeader";
 import HomeWhoWeHelp from "./HomeWhoWeHelp";
-import arrow from "../assets/up-arrow.png";
+import arrow from "../assets/Antu_arrow-up.svg";
 import * as Scroll from 'react-scroll';
 
     

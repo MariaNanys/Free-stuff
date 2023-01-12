@@ -1,7 +1,7 @@
 import React from "react";
 import { Button} from 'semantic-ui-react';
 import pic from "../assets/Myproject.png"
-import LogIn from "./LogIn";
+
 
 export function HomeHeader() {
     return (

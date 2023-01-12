@@ -15,28 +15,37 @@
             font-size: 1.1rem !important;
         }
 
-        Button {
-            color: $color-white !important;
-            background-color: $color-base !important;
-            width: 80%;
-            align-self: center !important;
-    
-            &:hover {
-                background-color: $color-dark-blue !important;
-            }
-        }
+        
     }
 
     .registation_success {
         width: 25rem;
-        height: 8rem;
-        background-color: lightblue;
+        height: 15rem;
+        background-color: $color-light-yellow;
         text-align: center;
         border-radius: 2rem;
         padding: 0.5rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
         
         h2 {
             font-size: 2rem;
+        }
+        .login {
+            cursor: pointer;
+            border: 0.2px solid $color-base;
+            color: $color-base;
+            background-color: $color-white;
+            margin: 0 0.25em 0 0;
+            padding: 0.3rem 1.5rem 0.3rem;
+            font-weight: 700;
+            border-radius: 0.28571429rem;
+
+        &:hover {
+            background-color: $color-base;
+            color: white;
+        }
         }
 }
     .hide {
@@ -44,8 +53,19 @@
     }
 
     .show {
-        display: block;
         width: 30rem;
+        display: flex;
+        flex-direction: column;
     }
 }
 
+.registration_btn {
+            color: $color-white !important;
+            background-color: $color-base !important;
+            width: 80%;
+            align-self: center;
+    
+        &:hover {
+            background-color: $color-dark-yellow !important;
+        }
+        }
