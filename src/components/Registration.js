@@ -146,7 +146,7 @@ export function Registration() {
                 <Button
                 type='submit'
                 disabled={shouldDisable()}
-                >Log In</Button>
+                >Register</Button>
             </Form>
             <div className={toogleHideClass ? 'show' : 'hide'}>
                 <div className="registation_success">
