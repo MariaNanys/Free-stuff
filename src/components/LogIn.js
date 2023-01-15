@@ -1,31 +1,77 @@
-import React from "react";
+import React, { useState, useEffect, useRef } from "react";
 import { Form, Button } from 'semantic-ui-react';
 
 export function LogIn() {
+    let savedLogin = JSON.parse(localStorage.getItem("arrayUserData")); 
+    let userLogin = savedLogin.login;
+    let userPassword = savedLogin.password;
+    let loginInput = useRef(null);
+    let passwordInput = useRef(null);
+
+    const [user, setUser ]= useState({
+        login: '',
+        password: '',
+    })
+
+    useEffect(() => {
+        const arrayUserLogin = {
+            login: user.login,
+            password: user.password,
+        }
+    }, [user.login, user.password])
+
+    
 
     function ContactForm() {
-        // const form = useForm({
-        //     initialValues: { email: '', title: '', message: '' },
-        
-        //     validate: {
-              
-        //       email: (value) => (/^\S+@\S+$/.test(value) ? null : 'Niepoprawny email'),
-        //       title: (value) => (value.length < 2 ? 'Tytuł musi składać się z minimum 2 liter' : null),
-        //       message: (value) => (value.length < 15 ? 'Treść musi składać się z minimum 15 liter' : null),
-        //     },
-        //   });
+
+        const dataCompareLogin = (e) => { 
+            setUser({
+                ...user,
+                login: e.target.value})
+            setTimeout(() => {
+                loginInput.current.focus()
+              });
+        }
+
+        const dataComparePassword = (e) => {
+            setUser({
+                ...user,
+                password: e.target.value})
+            setTimeout(() => {
+                passwordInput.current.focus()
+              });
+        }
+
+        function dataCompare(e) {
+            console.log(user.login);
+            console.log(user.password);
+            console.log(userLogin);
+            console.log(userPassword);
+            if(userLogin === user.login && userPassword === user.password) {
+                console.log('true');
+            } else {
+                console.error('error');
+            }
+        }
 
           return (
               <Form className="login_form">
                 <Form.Field>
                 <label>Login</label>
-                <input placeholder='Login'/>
+                <input placeholder='Login' className="login_input" 
+                ref={loginInput}
+                value={user.login}
+                onChange={(e) => dataCompareLogin(e)}/>
                 </Form.Field>
                 <Form.Field>
                 <label>Password</label>
-                <input placeholder='password'/>
+                <input placeholder='password'
+                ref={passwordInput}
+                value={user.password}
+                onChange={(e) => dataComparePassword(e)}
+                 />
                 </Form.Field>
-                <Button type='submit'>Log In</Button>
+                <Button type='submit'onClick={(e) => {dataCompare(e)}}>Log In</Button>
             </Form>
           )
           }
