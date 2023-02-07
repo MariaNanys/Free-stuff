@@ -16,15 +16,13 @@
     align-items: center;
     gap: 6rem;
 
-    .home_contact_infograph {
-    width: 43vw;
-    height: 52.4vh;
-    background-color: $color-light-yellow;
-    border-radius: 40px 0 40px 0;
+        .home_contact_infograph {
+        width: 43vw;
+        height: 52.4vh;
+        background-color: $color-light-yellow;
+        border-radius: 40px 0 40px 0;
+    }
 }
-}
-
-
 
 .home_contact_form {
     width: 30vw;
@@ -62,4 +60,9 @@ margin-top: 1rem !important;
     &:hover {
         background-color: $color-dark-yellow !important;
     }
+}
+
+.successMessage {
+    font-size: 2rem;
+    font-family: $font-alt;
 }

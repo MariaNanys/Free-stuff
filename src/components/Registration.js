@@ -1,8 +1,9 @@
 import React, { useState , useEffect } from "react";
 import { Form, Button } from 'semantic-ui-react';
-import { NavLink } from 'react-router-dom';
+import { NavLink, useNavigate } from 'react-router-dom';
 
 export function Registration() {
+    const navigate = useNavigate();
     const [user, setUser ]= useState({
         login: '',
         email: '',
@@ -15,16 +16,13 @@ export function Registration() {
     })
     const [toogleHideClass, setToogleHideClass ] = useState(false);
 
-    useEffect(() => {
-        const arrayUserData = {
-            login: user.login,
-            email: user.email,
-            password: user.password,
-            confirmPassword: user.confirmPassword
-        }
-            localStorage.setItem('arrayUserData', JSON.stringify(arrayUserData))
 
-    }, [user.login, user.email, user.password, user.confirmPassword])
+    useEffect(() => {
+        let savedLoginAndPassword = JSON.parse(localStorage.getItem("arrayUserLoged"));
+        if(savedLoginAndPassword) {
+            navigate('/');
+        }
+    })
 
     const onInputChangeLogin = (e) => {
         if (e.target.value.length <= 8) {
@@ -102,6 +100,19 @@ export function Registration() {
     
     const handleSubmit = (e) => {
         setToogleHideClass(true);
+        const arrayUserData = {
+            login: user.login,
+            email: user.email,
+            password: user.password,
+            confirmPassword: user.confirmPassword
+        }
+        const data =  localStorage.getItem('arrayUserData');
+        let users = [];
+        if(data) {
+            users = JSON.parse(data);
+        }
+        users.push(arrayUserData);
+        localStorage.setItem('arrayUserData', JSON.stringify(users))
     }
 
     return (

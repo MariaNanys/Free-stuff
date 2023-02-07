@@ -1,12 +1,12 @@
 import React, { useState, useEffect, useRef } from "react";
 import { Form, Button } from 'semantic-ui-react';
+import { useNavigate } from 'react-router-dom';
 
 export function LogIn() {
-    let savedLogin = JSON.parse(localStorage.getItem("arrayUserData")); 
-    let userLogin = savedLogin.login;
-    let userPassword = savedLogin.password;
     let loginInput = useRef(null);
     let passwordInput = useRef(null);
+    const navigate = useNavigate();
+
 
     const [user, setUser ]= useState({
         login: '',
@@ -14,11 +14,11 @@ export function LogIn() {
     })
 
     useEffect(() => {
-        const arrayUserLogin = {
-            login: user.login,
-            password: user.password,
+        let savedLoginAndPassword = JSON.parse(localStorage.getItem("arrayUserLoged"));
+        if(savedLoginAndPassword) {
+            navigate('/');
         }
-    }, [user.login, user.password])
+    })
 
     
 
@@ -43,13 +43,19 @@ export function LogIn() {
         }
 
         function dataCompare(e) {
-            console.log(user.login);
-            console.log(user.password);
-            console.log(userLogin);
-            console.log(userPassword);
-            if(userLogin === user.login && userPassword === user.password) {
-                console.log('true');
-            } else {
+            let users = JSON.parse(localStorage.getItem("arrayUserData")); 
+            if(users) {
+                const elem = users.find((element) => {
+                    return element.login === user.login && element.password === user.password;
+                });
+                if(elem) {
+                    localStorage.setItem('arrayUserLoged', JSON.stringify(elem.login));
+                    navigate('/');
+                } else {
+                console.error('error');
+                }
+            }
+            else {
                 console.error('error');
             }
         }
@@ -68,6 +74,7 @@ export function LogIn() {
                 <input placeholder='password'
                 ref={passwordInput}
                 value={user.password}
+                type="password"
                 onChange={(e) => dataComparePassword(e)}
                  />
                 </Form.Field>

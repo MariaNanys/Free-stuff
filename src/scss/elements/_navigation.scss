@@ -15,6 +15,24 @@
         gap: 1rem;
     }
 
+    .welcome_user {
+            color: $color-base;
+            font-weight: bold;
+            display: flex;
+            align-items: center;
+        }
+
+    .hide {
+        display: none;
+    }
+
+    
+    .picLogOut {
+        height: 1.2rem;
+        width: auto;
+        margin: 0 1rem;
+    }
+
     .login, .registration {
         cursor: pointer;
         border: 0.2px solid $color-base;
